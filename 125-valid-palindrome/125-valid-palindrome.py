@@ -3,13 +3,12 @@ class Solution:
         # range of alphabets in ASCII (65-90) & (97-122)
         r=""
         for i in range(len(s)):
-            # if (ord(s[i])>=65 and ord(s[i])<=90) or (ord(s[i])>=97 and ord(s[i])<=122) or ((ord(s[i])>=48 and ord(s[i])<=57)):
-            if s[i].isalnum():
+            if (ord(s[i])>=65 and ord(s[i])<=90) or (ord(s[i])>=97 and ord(s[i])<=122) or ((ord(s[i])>=48 and ord(s[i])<=57)):
+            # if s[i].isalnum():
                 if (ord(s[i])>=65 and ord(s[i])<=90):
                     r+=s[i].lower()
                 else:
                     r+=s[i]
-        print(r[::-1],r)
         return r[::-1]==r
     
     # functions used
