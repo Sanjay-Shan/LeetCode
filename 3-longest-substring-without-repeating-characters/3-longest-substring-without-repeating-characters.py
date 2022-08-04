@@ -1,22 +1,22 @@
 class Solution(object):
     def lengthOfLongestSubstring(self, s):
-        i=0 #pointer 1
-        j=i+1 #pointer 2
-        l=0 #temp variable
-        f=0 #length counter 
-        while j<=len(s):
-            # print(i,j,l,f)
-            # print(len(set(s[i:j]))==len(s[i:j]))
-            if len(set(s[i:j]))==len(s[i:j]):
-                   l+=1
-                   j+=1
+        p1=0      #pointer 1
+        p2=p1+1   #pointer 2
+        temp=0    #temp variable
+        ls=0      #length counter
+        
+        # keep running until the p2 pointer reaches the end of array 
+        while p2<=len(s):
+            if len(set(s[p1:p2]))==len(s[p1:p2]):
+                   temp+=1
+                   p2+=1
             else:
-                   i+=1
-                   j=i+1
-                   l=0
-            if l>=f:
-               f=l
-        return f
+                   p1+=1
+                   p2=p1+1
+                   temp=0
+            if temp>=ls:
+               ls=temp
+        return ls
             
                    
         
