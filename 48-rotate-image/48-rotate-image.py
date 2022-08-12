@@ -1,3 +1,5 @@
+import numpy
+
 class Solution(object):
     def rotate(self, matrix):
         """
